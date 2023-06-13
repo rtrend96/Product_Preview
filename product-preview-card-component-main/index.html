@@ -1,36 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Product preview card component</title>
 
-  Preview
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			body {
+				justify-content: center;
+			}
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+			._wrapper {
+				display: flex;
+				align-content: center;
 
-  Gabrielle Essence Eau De Parfum
+				width: 600px;
+				height: 450px;
+				left: 420px;
+				top: 175px;
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+				border: 1px solid #000000;
+				filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			}
+			._right-panel {
+				height: 450px;
+				width: 50%;
+			}
+			.img {
+				height: 450px;
+				border-radius: 5px;
+			}
+			._left-panel {
+				display: flex;
+			}
+			._p-header {
+				position: absolute;
+				height: 15px;
+				left: 55.25%;
+				right: 5.33%;
+				top: calc(50% - 15px / 2 - 185.5px);
 
-  $149.99
-  $169.99
+				/* Overline */
 
-  Add to Cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+				font-family: "Montserrat";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 12px;
+				line-height: 15px;
+				/* identical to box height */
+
+				letter-spacing: 5px;
+
+				/* Aurometal Saurus */
+
+				color: #6c7289;
+			}
+			._desc {
+				position: absolute;
+				height: 96px;
+				left: 55.33%;
+				right: 5.33%;
+				top: calc(50% - 96px / 2 - 110px);
+
+				/* Display */
+
+				font-family: "Fraunces";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 32px;
+				/* or 100% */
+
+				/* Gunmetal */
+
+				color: #1c232b;
+			}
+			._desc2 {
+				position: absolute;
+				height: 92px;
+				left: 55.25%;
+				right: 5.25%;
+				top: calc(50% - 92px / 2 + 8px);
+
+				/* Body */
+
+				font-family: "Montserrat";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 14px;
+				line-height: 23px;
+				/* or 164% */
+
+				/* Aurometal Saurus */
+
+				color: #6c7289;
+			}
+			._p-149 {
+				position: absolute;
+				height: 32px;
+				left: 55.33%;
+				right: 23.5%;
+				top: calc(50% - 32px / 2 + 99px);
+
+				/* Display */
+
+				font-family: "Fraunces";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 32px;
+				/* identical to box height, or 100% */
+
+				/* Deep Aquamarine */
+
+				color: #3d8168;
+			}
+			._p-169 {
+				position: absolute;
+				height: 23px;
+				left: 79.67%;
+				right: 12.33%;
+				top: calc(50% - 23px / 2 + 99.5px);
+
+				font-family: "Montserrat";
+				font-style: normal;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 23px;
+				/* identical to box height, or 177% */
+
+				text-decoration-line: line-through;
+
+				/* Aurometal Saurus */
+
+				color: #6c7289;
+			}
+			button {
+				position: absolute;
+				left: 55.33%;
+				right: 5.33%;
+				top: 82.22%;
+				bottom: 7.11%;
+				width: 236px;
+				height: 48px;
+
+				/* Deep Aquamarine */
+
+				background: #3d8168;
+				border-radius: 8px;
+			}
+			.btn {
+				height: 17px;
+				left: 23.42%;
+				right: 0%;
+				top: calc(50% - 17px / 2 - 0.5px);
+
+				/* Button Text */
+
+				font-family: "Montserrat";
+				font-style: normal;
+				font-weight: 700;
+				font-size: 14px;
+				line-height: 17px;
+				/* identical to box height */
+
+				/* Pure White */
+
+				color: #ffffff;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="_wrapper">
+			<div class="_right-panel">
+				<img class="img" src="./images/image-product-desktop.jpg" />
+			</div>
+			<div class="_left-panel">
+				<span class="_p-header">PERFUME</span>
+			</div>
+			<div class="_desc"> Gabrielle Essence Eau De Parfum </div>
+			<div class="_desc2">
+				A floral, solar and voluptuous interpretation composed by Olivier Polge,
+				Perfumer-Creator for the House of CHANEL.
+			</div>
+			<div class="_p-149"> $149.99 </div>
+			<div class="_p-169"> $169.99 </div>
+			<button
+				><span class="btn">
+					<img src="./images/icon-cart.svg" /> Add to Cart
+				</span>
+			</button>
+		</div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
 </html>
